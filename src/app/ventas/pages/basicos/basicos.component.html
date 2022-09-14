@@ -1,0 +1,110 @@
+
+
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p> Pipes incluidos en Angular - Usualmente en el Common Module</p>
+    <p> Los pipes son utilizados para cambiar visualmente la información,
+        para ultilizarlos se debe implementar el caracter | en una variable, Por ejemplo:</p>
+    <p> <strong> '{{' variable | pipe }} </strong>, sin incluir las comillas.</p>
+    <br>
+        
+    
+</div>
+
+
+<div class="grid">
+    <div class="col-4">
+        <p-card
+            header="| uppercase">
+            <p> {{nombreLower}} | uppercase </p>
+            <p> {{nombreLower | uppercase}}</p>       
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card
+            header="| lowercase">
+            <p> {{nombreUpper}} | lowercase </p>
+            <p> {{nombreLower | lowercase}}</p>
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card
+            header="| titlecase">
+            <p> {{nombreCompleto}} | titlecase </p>
+            <p> {{nombreCompleto | titlecase}}</p>
+        </p-card>
+    </div>
+
+</div>
+
+<div class="text-layout">
+    <h1>Date Pipe</h1>
+    <p>Pipe para mostrar fechas y horas, para mas informacion acerca de los formateos de fechas, visitar
+         <a href="https://angular.io/api/common/DatePipe">https://angular.io/api/common/DatePipe</a> </p>
+    
+</div>
+<div class="grid">
+        <div class="col-6">
+            <p-card header="| pipe">
+                <ul>
+                    <p>Fecha</p>
+                    <p> {{ fecha | date}}</p>
+                </ul>
+            </p-card>
+        </div>
+        <div class="col-6">
+            <p-card header="Fecha normal">
+                <p>Fecha</p>
+                <p> {{ fecha }}</p>
+                
+            </p-card>
+        </div>
+</div>
+<div class="grid">
+    <div class="col-6">
+        <p-card header="| pipe: 'short'">
+            <ul>
+                <p>Fecha</p>
+                <p> {{ fecha | date: 'short'}}</p>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card header="| pipe: 'MM/d/yy'">
+            <p>Fecha</p>
+            <p> {{ fecha | date: 'MM/d/yy' }}</p>
+            
+        </p-card>
+    </div>
+</div>
+<div class="grid">
+    <div class="col-6">
+        <p-card header="| pipe: 'mediumTime'">
+            <ul>
+                <p>Fecha</p>
+                <p> {{ fecha | date: 'mediumTime'}}</p>
+                <hr>
+                <p>Time Zone | date: 'shortTime': 'GMT-2'</p>
+                <p>{{ fecha | date: 'shortTime': 'GMT-2' }} + 1 hora</p>
+                <hr>
+                <p>Cambio de Idioma | date: 'long' :' ': 'es-CL'</p>
+                <p>{{ fecha | date: 'long': '':'es-CL'}}</p>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card header="| pipe: 'MMMM d, y, h:mm a'">
+            <p>Fecha</p>
+            <p> {{ fecha | date: 'MMMM d, y, h:mm a' }}</p>
+            <hr>
+            <p>Time Zone | date: 'shortTime': 'GMT-4'</p>
+            <p>{{ fecha | date: 'shortTime': 'GMT-4' }} - 1 hora</p>
+            <hr>
+            <p>Cambio de Idioma | date: 'long' :' ': 'ru'</p>
+            <p>{{ fecha | date: 'long' :' ': 'ru' }}</p>
+        </p-card>
+    </div>
+</div>
+

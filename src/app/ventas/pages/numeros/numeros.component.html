@@ -1,0 +1,56 @@
+<div class="text-layout">
+    <h1>Pipes Numerales</h1>
+    <p> Pipes incluidos en Angular - Usualmente en el Common Module</p>
+    <p> Los pipes son utilizados para cambiar visualmente la información,
+        para ultilizarlos se debe implementar el caracter | en una variable, Por ejemplo:</p>
+    <p> <strong> '{{' variable | pipe }} </strong>, sin incluir las comillas.</p>
+    <br>
+        
+    
+</div>
+
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="| number"
+                subheader="Decimal Pipe">
+                <div class="grid">
+                    <div class="col-6">
+                        <h5>Numero Normal</h5>
+                        <p> <i class="pi pi-dollar"></i>
+                        {{ ventasNetas | number}} </p>
+                    </div>
+                    <div class="col-6">
+                        <h5>Numero Formateado</h5>
+                        <p> <i class="pi pi-dollar"></i>
+                        {{ ventasNetas | number: '': 'es-CL'}} </p>
+                    </div>
+                </div>
+                
+                
+            
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="| currency "
+                subheader="">
+            <h5>Moneda en EUR</h5>
+            <p> {{ ventasNetas | currency: 'EUR' }}</p>
+            <h5>Moneda en USD</h5>
+            <p> {{ ventasNetas | currency: 'USD' }}</p>
+            
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="| percent "
+                subheader="">
+            <h5>Porcentaje</h5>
+            <p> {{ porcentaje | percent }}</p>
+            <h5>Porcentaje Format</h5>
+            <p> {{ porcentaje | percent: '2.2-2' }}</p>
+            
+            
+        </p-card>
+    </div>
+</div>
